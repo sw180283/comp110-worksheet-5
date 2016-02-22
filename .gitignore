@@ -236,4 +236,4 @@ _Pvt_Extensions
 .fake/
 
 # Force the entire SDL distribution to be added to the repository
-!**/SDL2-*/**
+!**/SDL2*/**
