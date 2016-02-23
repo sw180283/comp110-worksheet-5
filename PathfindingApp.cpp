@@ -6,6 +6,9 @@
 #include "Map.h"
 #include "Pathfinder.h"
 
+// Change this to test your pathfinder on different maps
+const char* MAP_NAME = "Maps\\map1.txt";
+
 PathfindingApp::PathfindingApp()
 {
 	// Initialise SDL
@@ -16,7 +19,7 @@ PathfindingApp::PathfindingApp()
 	}
 
 	// Load map
-	map = new Map("Maps/map1.txt");
+	map = new Map(MAP_NAME);
 
 	// Calculate tile size, based on window height of 800 pixels
 	tileSize = 800 / map->getHeight();
