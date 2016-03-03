@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Pathfinder.h"
+#include "Node.h"
 /*
 void closedSet()
 {
@@ -26,12 +27,9 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 	std::cout << "q contains " << closedQ.size() << " elements.\n" << std::endl;
 
 	//openSet had start in
-	//ERROR why doesn't it take the start from const Point?
-	//What can I change the type to?
 	//const unsigned int start = start;
-	//dynamic_cast<void*>(start);
-	std::queue <const unsigned int> openQ;
-	openQ.push(start);
+	//std::queue <Node> openQ;
+	//openQ.push(startPoint);
 
 	//startNode.g = 0
 	/*void EuclideanDistance()
