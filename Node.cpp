@@ -1,8 +1,11 @@
 #include "stdafx.h"
 #include "Node.h"
+#include "Map.h"
+#include "PathfindingApp.h"
 
-
-Node::Node()
+Node::Node(const Point& point)
+	//: startPoint (point) 
+	: xPosition(point.getX()), yPosition(point.getY())
 {
 }
 

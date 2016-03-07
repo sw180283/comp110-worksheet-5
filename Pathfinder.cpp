@@ -21,10 +21,16 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 {
 	// TODO: implement the A* algorithm to find a path from start to goal
 
+	Node startNode(start);
+
 	//closedSet is empty queue
 	std::queue <int> closedQ;
 	//closedQ.push(1);
 	std::cout << "q contains " << closedQ.size() << " elements.\n" << std::endl;
+
+	//list for priority queue
+	std::priority_queue <Node> openQ;
+	openQ.push(startPoint);
 
 	//openSet had start in
 	//const unsigned int start = start;
