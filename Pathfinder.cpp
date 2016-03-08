@@ -10,9 +10,16 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 	Node startNode(start);
 
 	//OpenSet
-	std::priority_queue <Node, std::vector<Node>, ComparePriority> openQ;
+	std::priority_queue<Node*, std::vector<Node*>, ComparePriority> openQ;
+	//std::priority_queue <Node, std::vector<Node>, ComparePriority> openQ;
+
+	//constructs empty priority queue
+	//std::priority_queue<Node> empty;
+	//std::priority_queue<Node> openQ;
+	//std::priority_queue<Node, std::vector<Node>, std::less<Node>> distanceNode;
 	openQ.push(start);
-	Node node2 = openQ.top();
+	//Node node2 = openQ.top();
+	openQ.pop();
 
 	//std::cout << "openQ contains " << openQ.size() << " elements.\n" << std::endl;
 	//startNode.g;
