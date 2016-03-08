@@ -4,24 +4,38 @@
 
 class Node
 {
+
 public:
 	Node(const Point& point);
 	~Node();
 
 	//start point of mouse
 	Point startPoint;
+	//Point cameFrom;
 	//Point goalPoint;
+
+	//for estimating the distance
+	//const int estimate;
+
+	/*
+	//duplication of point.h
+	int getxPos() const { return xPos; }
+	int getyPos() const { return yPos; }
+	*/
+
+	//total distance already travelled
+	int getGValue() const { return g; }
+
+	//EuclideanDistance 
+	int getHValue() const { return h; }
+
+	//Lowest is current priority
+	int getFValue() const { return f; }
+
+	struct ComparePriority;
 
 	std::string name;
 	//Point getPriority();
-
-	//current position of node
-	//int xPosition;
-	//int yPosition;
-
-	//current position of node
-	//int CurrentXPos;
-	//int CurrentYPos;
 
 	//start position of path
 	//int startXPos;
@@ -31,9 +45,17 @@ public:
 	//int GoalXPos;
 	//int GoalYPos;
 
-	//total distance to current
-	//int g;
+private:
+	//current position of node
+	int xPos;
+	int yPos;
 
-	//Euclidean Distance (x0,y0) (x1,y1) sqr/((x0) - pow(x1, 2)) + ((y0)-pow(y1, 2))
-	//int h;
+	//total distance to current
+	int g;
+
+	//Euclidean Distance
+	int h;
+
+	//GValue + HValue
+	int f;
 };
