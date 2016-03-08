@@ -1,21 +1,7 @@
+#pragma once
 #include "stdafx.h"
 #include "Pathfinder.h"
 #include "Node.h"
-/*
-void closedSet()
-{
-	//closedSet is empty queue
-	std::queue <int> closedQ;
-	//closedQ.push(1);
-	std::cout << "q contains " << q.size() << " elements.\n" <<std::endl;
-}
-
-void openSet()
-{
-	std::queue <int> openQ;
-	openQ.push(start);
-}
-*/
 
 std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, const Point& goal)
 {
@@ -23,27 +9,25 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 
 	Node startNode(start);
 
+	//OpenSet
+	std::priority_queue <Node, std::vector<Node>, ComparePriority> openQ;
+	openQ.push(start);
+	Node node2 = openQ.top();
+
+	//std::cout << "openQ contains " << openQ.size() << " elements.\n" << std::endl;
+	//startNode.g;
+
 	//closedSet is empty queue
-	std::queue <int> closedQ;
+	//std::queue <int> closedQ;
 	//closedQ.push(1);
-	std::cout << "q contains " << closedQ.size() << " elements.\n" << std::endl;
+	//std::cout << "q contains " << closedQ.size() << " elements.\n" << std::endl;
 
 	//list for priority queue
-	std::priority_queue <Node> openQ;
-	openQ.push(startPoint);
-
-	//openSet had start in
-	//const unsigned int start = start;
-	//std::queue <Node> openQ;
+	//std::priority_queue <Node> openQ;
 	//openQ.push(startPoint);
 
-	//startNode.g = 0
-	/*void EuclideanDistance()
-	{
+	//std::priority_queue <Point> openQ;
 
-	}
-	*/
-	//startNode.h = EuclideanDistance()
 
 	std::vector<Point> result;
 	return result;
