@@ -30,30 +30,9 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 	startNode.g = 0;
 
 	//Euclidean Distance startNode goalNode
-	EuclideanDistance distance(startNode, goalNode);
-	//startNode.h = EuclideanDistance
-	
-	/*
-	//closedSet is empty queue
-	std::queue <int> closedQ;
-	//closedQ.push(1);
-	std::cout << "q contains " << closedQ.size() << " elements.\n" << std::endl;
 
+	startNode.h = EuclideanDistance(startNode, goalNode);
 
-	//OpenSet
-	std::priority_queue<Node*, std::vector<Node*>, ComparePriority> openQ;
-	//std::priority_queue <Node, std::vector<Node>, ComparePriority> openQ;
-	openQ.push(start);
-	Node node2 = openQ.top();
-	openQ.pop();
-	std::cout << "openQ contains " << openQ.size() << " elements.\n" << std::endl;
-
-	//startNode.g is 0
-	startNode.g = 0;
-
-	//startNode.h is Euclidean Distance
-	startNode.h = 
-	*/
 
 	std::vector<Point> result;
 	return result;

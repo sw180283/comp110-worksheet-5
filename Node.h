@@ -14,17 +14,8 @@ public:
 	//Point cameFrom;
 	//Point goalPoint;
 
-	int getX() { return xPos; }
-	int getY() { return yPos; }
-
-	//for estimating the distance
-	//const int estimate;
-
-	/*
-	//duplication of point.h
-	int getxPos() const { return xPos; }
-	int getyPos() const { return yPos; }
-	*/
+	int getX() const { return xPos; }
+	int getY() const { return yPos; }
 
 	//total distance already travelled
 	int getGValue() const { return g; }
@@ -36,9 +27,6 @@ public:
 	int getFValue() const { return f; }
 
 	struct ComparePriority;
-
-	//Euclidean Distance startNode goalNode
-	//double EuclideanDistance;
 
 	std::string name;
 	//Point getPriority();

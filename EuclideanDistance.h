@@ -11,7 +11,7 @@ public:
 	Node currentPoint;
 	Node nextPoint;
 
-	double distance;
+	double calculateDistance(double currentXPos, double currentYPos, double nextXPos, double nextYPos);
 
 	//current position of node
 	int currentXPos;
