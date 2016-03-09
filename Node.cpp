@@ -13,15 +13,15 @@ Node::Node(const Point& point)
 	{	
 		friend bool operator<(const Node& node1, const Node& node2)
 		{
-			return node1.getHValue() > node2.getHValue();
+			return node1.getFValue() > node2.getFValue();
 		}
 	};
 
 	//what does Dest do?
-	void calculateFValue(const Point& pointDest)
+	void calculateFValue(const Point& point)
 	{
 		//Is the * 10 to stop it from being a decimal?
-		FValue = GValue + getHValue(pointDest) * 10;
+		FValue = GValue + getHValue(point) * 10;
 	}
 
 	/*

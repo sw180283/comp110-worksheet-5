@@ -11,7 +11,7 @@ public:
 	Node currentPoint;
 	Node nextPoint;
 
-	double calculateDistance(double currentXPos, double currentYPos, double nextXPos, double nextYPos);
+	const int calculateDistance(double currentXPos, double currentYPos, double nextXPos, double nextYPos);
 
 	//current position of node
 	int currentXPos;

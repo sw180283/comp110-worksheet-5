@@ -16,8 +16,8 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 	
 	//if dir==4
 	const int dir = 4;
-	static int dx[dir] = { 1, 0, -1, 0 };
-	static int dy[dir] = { 0, 1, 0, -1 };
+	static int x[dir] = { 1, 0, -1, 0 };
+	static int y[dir] = { 0, 1, 0, -1 };
 	
 	//closedSet is empty
 	std::vector<Node> closedSet;
@@ -30,8 +30,37 @@ std::vector<Point> Pathfinder::findPath(const Map& map, const Point& start, cons
 	startNode.g = 0;
 
 	//Euclidean Distance startNode goalNode
-
 	startNode.h = EuclideanDistance(startNode, goalNode);
+
+	//cameFrom
+	startNode.cameFrom = nullptr;
+
+	//while
+	while (!openSet.empty())
+	{
+		//getFValue
+		Node currentNode(openSet.top());
+
+		if currentNode = goalNode
+		{
+			return ReconstructPath(goalNode);
+		}
+		//remove currentNode from openSet
+		openSet.pop();
+		closedSet.push_back(currentNode);
+
+		static int i;
+		for (i = 0; i < dir; i++)
+		{
+			nextXPos = currentXPos + x[i];
+			nextYPos = currentYPos + y[i];
+			const Point& neighbourNode = (nextXPos, nextYPos);
+			Map* map;
+			if(!neighbourNode = map.isWall)
+		}
+	}
+	//end
+
 
 
 	std::vector<Point> result;
